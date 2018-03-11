@@ -9,18 +9,26 @@ namespace CCharpBasic
     
     class Program
     {
-        readonly public int num;
-        const  int num1 =1;
        
         static void Main(string[] args)
         {
             PermanentEmployee pe = new PermanentEmployee();
-            pe.DisplayName("ALKA", "MALIK");
-            Console.WriteLine(pe.calculateSalary());
+            //pe.DisplayName("ALKA", "MALIK");
+            //Console.WriteLine(pe.calculateSalary());
 
-            ContractEmployee ce = new ContractEmployee();
-            ce.DisplayName("BHOOPENDRA", "RATHORE");
-            Console.WriteLine(ce.calculateSalary());
+            //ContractEmployee ce = new ContractEmployee();
+            //ce.DisplayName("BHOOPENDRA", "RATHORE");
+            // Console.WriteLine(ce.calculateSalary());
+            
+            PersonBChild pc1 = new PersonBChild();
+            PersonBChild pc = new PersonBChild("ALka","Malik");
+            VarAndDynamic vd1 = new VarAndDynamic();
+            vd1.Displayvar();
+            vd1.Displaydynamic(10233);
+            vd1.DisplayChangeddynamic("Pooja");
+            ConsAndReadOnly ro = new ConsAndReadOnly();
+            
+
 
 
 
