@@ -27,11 +27,8 @@ namespace CCharpBasic
             vd1.Displaydynamic(10233);
             vd1.DisplayChangeddynamic("Pooja");
             ConsAndReadOnly ro = new ConsAndReadOnly();
-            
 
-
-
-
+            Finalizer4 f = new Finalizer4();
         }
     }
 }
