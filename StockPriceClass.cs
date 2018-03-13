@@ -44,6 +44,7 @@ namespace CCharpBasic
     }
     class IsElementExists
     {
+        //IsElementExists
         public IsElementExists(int[] Array1, int[] Array2)
         {
           
