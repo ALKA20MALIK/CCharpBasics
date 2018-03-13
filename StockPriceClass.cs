@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace CCharpBasic
 {
     //find out best price to sell stock if you have choice of multiple times to buy and sell
-    class SotckClass
+    class StockPriceClass
     {
         public void CalculatePrice(int [] PriceList)
         {
@@ -41,5 +41,30 @@ namespace CCharpBasic
             }
         }
 
+    }
+    class IsElementExists
+    {
+        public IsElementExists(int[] Array1, int[] Array2)
+        {
+          
+            for (int i = 0; i < Array1.Length; i++)
+            {
+               
+                for (int j = 0; j < Array2.Length; j++)
+                {
+                    if (Array1[i] != Array2[j] && j+1 == Array2.Length)
+                    {
+                        Console.WriteLine($"Not exists in Array2:{Array1[i]}");
+                       
+                    }
+                    else if (Array1[i] == Array2[j])
+                    {
+                        break;                       
+                    }
+                }
+                
+            }
+
+        }
     }
 }
