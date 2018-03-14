@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
 
 namespace CCharpBasic
 {
@@ -70,6 +71,32 @@ namespace CCharpBasic
                 
             }
 
+        }
+    }
+    class CampareArray
+    {
+        public void CampareArraytwoArray()
+        {
+            List<int> List1 = new List<int>() { 10,12};
+            List<int> List2 = new List<int>() { 1, 2, 4, 5 };
+         
+            
+            int[] arrayList = new int[5];
+            arrayList = List1.Except(List2).ToArray();
+            if (arrayList.Length > 0)
+            { 
+                foreach (var item in arrayList)
+                {
+                    Console.WriteLine(item);
+                }
+                arrayList= arrayList.Reverse().ToArray();
+                foreach (var item in arrayList)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+           
+           
         }
     }
 }
