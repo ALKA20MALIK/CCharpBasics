@@ -11,6 +11,7 @@ namespace CCharpBasic
     {
         public void CalculatePrice(int [] PriceList)
         {
+            int buyDay = 0, sellDay = 0;
             int localMinima = 0, localMaxima = 0;
             for (int i = 0; i < PriceList.Length; i++)
             {
@@ -19,12 +20,14 @@ namespace CCharpBasic
                     if (PriceList[i] < PriceList[i + 1] && localMinima == 0)
                     {
                         localMinima = PriceList[i];
+                        buyDay = i;
                     }
                     else if (localMinima != 0 && PriceList[i] > PriceList[i + 1])
                     {
                         localMaxima = PriceList[i];
-                        Console.WriteLine($"Local Minima:{localMinima}");
-                        Console.WriteLine($"Local Maxima:{localMaxima}");
+                        sellDay = i;
+                        Console.WriteLine($"Buy Day:{buyDay}");
+                        Console.WriteLine($"Sell Day:{sellDay}");
                         localMaxima = 0;
                         localMinima = 0;
                     }
@@ -32,11 +35,12 @@ namespace CCharpBasic
                 else
                 {
                     localMaxima = PriceList[i];
+                    sellDay = i;
                 }
                 if (localMaxima != 0 && localMinima != 0)
                 {
-                    Console.WriteLine($"Local Minima:{localMinima}");
-                    Console.WriteLine($"Local Maxima:{localMaxima}");
+                    Console.WriteLine($"Buy Day:{buyDay}");
+                    Console.WriteLine($"Sell Day:{sellDay}");
                 }
             }
         }
